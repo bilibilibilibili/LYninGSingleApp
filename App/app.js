@@ -5,12 +5,10 @@
 var express = require('express');
 var app = express();
 
-app.use(require('connect-livereload')({
-    port: 35729
-}));
+app.use(express.static('dist'));
 
 app.get('/', function(req, res){
-    res.send('hello');
+    res.sendFile('./static/dist/index.html');
 });
 
 app.listen(4869, function(){
