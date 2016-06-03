@@ -2,16 +2,16 @@
  * Created by lyning on 16/1/28.
  */
 
-var Vue = require('vue');
-var VueRouter = require('vue-router');
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
 var router = new VueRouter();
-var HomePage = require('./Pages/HomePage.vue');
+import HomePage from './Pages/HomePage.vue';
 
 router.map({
-	'/': {component: HomePage}
+    '/': {component: HomePage}
 });
 
 router.start(HomePage, '#app');
